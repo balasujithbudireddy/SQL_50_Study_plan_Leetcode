@@ -1,0 +1,8 @@
+select
+w2.id
+from
+weather w1
+inner join
+weather w2
+on w1.recorddate=date_add(w2.recorddate,interval-1 day)
+and w2.temperature >w1.temperature;
